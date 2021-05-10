@@ -1,0 +1,18 @@
+{
+  "name": "extra-hop-chat-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "tsc ./chatbot.ts && node ./chatbot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
