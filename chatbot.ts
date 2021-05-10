@@ -6,8 +6,8 @@ import { WordMap } from "./WordMap";
 const handleUserMessage = (message: string, state: WordMap) => {
     // assuming username doesn't contain ": " and that there always is ": " to denote text after a username
     const messageText = message.split(/: (.+)/)[1];
-    messageText.toLowerCase().split(" ").filter(x => x !== null).forEach((word: string) => {
-        state[word] = (state[word] as number || 0) + 1;
+    messageText.toLowerCase().split(" ").filter(x => x !== null).forEach((word) => {
+        state[word] = (state[word] || 0) + 1;
     });
 
     return state;
