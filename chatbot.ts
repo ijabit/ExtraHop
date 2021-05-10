@@ -16,8 +16,8 @@ const handleUserMessage = (message: string, state: WordMap) => {
 const generateTopTenMessage = (state: WordMap) => {
     let result = Object.entries(state)
         .sort((a, b) => b[1] - a[1])
-        .map(entry => `"${entry[0]}": ${entry[1]}`)
         .slice(0, 10)
+        .map(entry => `"${entry[0]}": ${entry[1]}`)
         .join("\n");
 
     return { state, message: `\nTop 10 Chat Word Counts:\n${result}` } as TopTenWords;
